@@ -29,6 +29,10 @@ def create_app():
     @app.route('/game')
     @app.route('/gamepage')
     def game_page():
+        pickle_in = open("classiferShark.pickle", "rb")
+        classifier = pickle.load(pickle_in)
+        pickle_in.close()
+        prediction = classifier.fit()
         return render_template('game.html')
 
     @app.route('/mlmodel')
@@ -37,7 +41,7 @@ def create_app():
         pickle_in = open("classiferShark.pickle", "rb")
         classifier = pickle.load(pickle_in)
         pickle_in.close()
-        prediction = classfier.fit()
+        prediction = classifier.fit()
         return render_template('mlmodel.html')
 
     return app
