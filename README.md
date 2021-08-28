@@ -14,6 +14,8 @@ To make an application that will determine if you will devoured by a shark based
 <p align="center">
 <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
 </p>
+
+
 ## People Part of the Project:
 
 <center>
