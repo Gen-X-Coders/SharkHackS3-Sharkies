@@ -91,7 +91,9 @@ body {
     </div>
   </div>
   <script>
-      const textElement = document.getElementById('text')
+
+const selectedOptions =   [];
+const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 
 let state = {}
@@ -124,7 +126,10 @@ function showOption(option) {
 }
 
 function selectOption(option) {
+  selectedOptions.push(option)
+  
   const nextTextNodeId = option.nextText
+ 
   if (nextTextNodeId <= 0) {
     return startGame()
   }
@@ -295,6 +300,7 @@ const textNodes = [
                 nextText: 3
             }
         ]
+        
     },
     {
         id: 3,

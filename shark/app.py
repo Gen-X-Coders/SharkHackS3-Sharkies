@@ -6,6 +6,8 @@ Created on Sat Aug 28 08:02:55 2021
 """
 
 from flask import Flask, render_template
+import pickle
+
 def create_app():
     app = Flask(__name__)
 
@@ -32,6 +34,10 @@ def create_app():
     @app.route('/mlmodel')
     @app.route('/mlmodelpage')
     def mlmodel_page():
+        pickle_in = open("classiferShark.pickle", "rb")
+        classifier = pickle.load(pickle_in)
+        pickle_in.close()
+        prediction = classfier.fit()
         return render_template('mlmodel.html')
 
     return app
