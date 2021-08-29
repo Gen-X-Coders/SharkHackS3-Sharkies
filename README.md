@@ -1,6 +1,6 @@
 ## Objective
 <p>
-To make an application that will determine if you will devoured by a shark based off historic data and machine learning in the form of an interactive and fun website. 
+To make an application that will determine if you will be devoured by a shark based off historic data and machine learning in the form of an interactive and fun website. 
 </p>
 
 ##  Languages Used:
