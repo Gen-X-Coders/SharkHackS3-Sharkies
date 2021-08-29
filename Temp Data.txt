@@ -1,0 +1,93 @@
+def format_data(data):
+    # Country Activity Age Sex_F Sex_M Time_Afternoon Time_Evening Time_Morning Time_Night
+
+    country_encoding = {'USA' : 0.04010025,'BRAZIL': 0.36,'AUSTRALIA': 0.27272727, 'SOUTH AFRICA': 0.20465116, 'BAHAMAS' : 0.07692308, 'MEXICO' :0.49999999, 
+        'REUNION' : 0.46153846,'EGYPT' :  0.24990115,'NEW ZEALAND' :  0.18749999,'NEW CALEDONIA' :  0.3999681 , 'MOZAMBIQUE' : 0.18181635,
+        'FIJI' : 0.29998044,'PAPUA NEW GUINEA':  0.49995576}
+
+    activity_encoding = {'Standing':0.08474576, 'Surfing':0.05641026, 'Swimming': 0.27574751, 'Walking': 0.07692347, 'Wading':0.07142857,
+        'Spearfishing': 0.15740741, 'Snorkeling': 0.19565217, 'Fishing': 0.02272727, 'Kayaking': 0.2826087 ,
+        'Body boarding': 0.10000512 , 'Free diving': 0.05, 'Boogie boarding': 0.26666656, 'Diving': 0.16216216,
+        'Body surfing': 0.27272132, 'Windsurfing': 0.0833343, 'Boogie Boarding': 0.3 , 'Scuba diving': 0.23076923,
+        'Treading water': 0.55, 'Bathing': 0.14149755}
+    
+    country = country_encoding[data[0]]
+    activity= activity_encoding[data[1]]
+    X = [country, activity, data[2]]
+    if( data[3] == 'M' ):
+        X.append([0, 1])
+    else:
+        X.append([1, 0])
+    
+    if( data[5] == 'Afternoon' ):
+        X.append([1, 0, 0, 0])
+    elif( data[5] == 'Evening' ):
+        X.append([0, 1, 0, 0])
+    elif( data[5] == 'Morning' ):
+        X.append([0, 0, 1, 0])
+    else:
+        X.append([0, 0, 0, 1])
+
+    X = np.array(X)
+    
+    return X
+
+
+@app.route('/gamepage', methods=['POST'])
+    def game_page():
+        if request.method == 'POST':
+            response = (request.get_json())  # parse as JSON
+            print(response)
+            session['response'] = response
+            return 'Sucesss', 200
+        print('HEllo')
+        return render_template('game.html')
+
+
+
+
+
+def mlmodel_page():
+    
+        pickle_in = open("classiferShark.pickle", "rb")
+        classifier = pickle.load(pickle_in)
+        
+        data = session.get("response",None)
+        X = format_data(data)
+        prediction = classifier.fit(X)
+        pickle_in.close()
+        return render_template('mlmodel.html', data=prediction)
+
+
+if (nextTextNodeId == -1) {
+    console.log("last page!")
+    
+    fetch('/hello', {
+
+    // Declare what type of data we're sending
+    headers: {
+      'Content-Type': 'application/json'
+    },
+
+    // Specify the method
+    method: 'POST',
+
+    // A JSON payload
+    body: JSON.stringify({
+      "greeting": "Hello from the browser!"
+    })
+    }).then(function (response) { // At this point, Flask has printed our JSON
+    return response.text();
+    }).then(function (text) {
+
+    console.log('POST response: ');
+
+    // Should be 'OK' if everything was successful
+    console.log(text);
+    });
+  }
+  state = Object.assign(state, option.setState)
+  showTextNode(nextTextNodeId)
+}
+   
+
