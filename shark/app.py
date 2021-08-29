@@ -74,19 +74,28 @@ def create_app():
 
             data = [name, age, location, location_inner, beach, time, activity]
             print(data)
+            pickle_in = open("classifierShark.pickle", "rb")
+            classifier = pickle.load(pickle_in)
+            pickle_in.close()
+            #data = session.get("data",None)
+            #X = format_data(data)
+            #print(X)
+            #prediction = classifier.fit(X)
+            prediction = 1
+            return render_template('mlmodel.html', data=prediction)
             
         return render_template('game.html')
 
-    @app.route('/mlmodel')
-    @app.route('/mlmodelpage')
+    @app.route('/mlmodel_page')
     def mlmodel_page():
-        pickle_in = open("classiferShark.pickle", "rb")
+        pickle_in = open("classifierShark.pickle", "rb")
         classifier = pickle.load(pickle_in)
         pickle_in.close()
         #data = session.get("data",None)
         #X = format_data(data)
         #print(X)
         #prediction = classifier.fit(X)
+        prediction = 1
         return render_template('mlmodel.html')
 
     return app
