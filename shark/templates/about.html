@@ -1,0 +1,50 @@
+{%extends 'base.html'%}
+{%block title%} 
+About
+{%endblock%}
+{%block stylesheet%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Shadows+Into+Light" />
+{%endblock%}
+{%block extrastyle%} 
+<style>
+    h1 {
+        position: fixed;
+        top: 10%;
+        left: 50;
+        z-index: 999;
+        text-align: center;
+        color:white;
+        font-family: "Montserrat", sans-serif;
+        font-size: 40px;
+    }
+    h1 { font-family: "Shadows Into Light"; font-size: 80px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; }
+    p {
+        color:white;
+        font-family: "Shadows Into Light";
+        font-size: 25px;
+        line-height: 1.6;
+    }
+    body {
+        padding: 4%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%),url("/static/img/about.png");
+        background-repeat: no-repeat;
+	      background-size: cover;
+    }
+   
+</style>
+{%endblock%}
+{%block content%}
+<h1>About</h1>
+<br>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+     Perferendis veritatis sunt magni enim suscipit, doloribus obcaecati unde delectus, beatae, minima tenetur. 
+     Sed ipsum doloribus, laboriosam impedit aspernatur officia obcaecati fuga nobis possimus autem corrupti aperiam atque minima!
+      At distinctio, aut minima iure soluta, molestiae odio, laboriosam sapiente illo debitis ratione explicabo? Nam, 
+      veniam vitae asperiores numquam dolore nihil fugiat aliquid, accusamus, quam voluptatem cupiditate doloremque. 
+      Odit quos omnis laboriosam repellendus dolor nulla vero similique?
+    Dolore veritatis ipsum placeat at sed! Minus similique cumque earum placeat. 
+    Quaerat ipsum ipsam quod obcaecati placeat in ullam vero quia provident. Corporis fugit adipisci similique!</p>
+    <br>
+    
+{%endblock%}
