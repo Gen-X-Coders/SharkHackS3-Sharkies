@@ -23,7 +23,7 @@ We got our dataset from https://www.kaggle.com/felipeesc/shark-attack-dataset wh
 
 ## People Part of the Project:
 
-<center>
+<center style="text-align:center">
   
   
 | Person  | Linkedin |
