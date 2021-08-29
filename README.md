@@ -1,3 +1,5 @@
+![Sharkies Banner](https://github.com/Gen-X-Coders/SharkHackS3-Sharkies/blob/main/readme_resources/Sharkies.gif)
+
 ## Objective
 <p>
 To make an application that will determine if you will devoured by a shark based off historic data and machine learning in the form of an interactive and fun website. 
