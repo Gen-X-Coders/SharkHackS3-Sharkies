@@ -1,6 +1,11 @@
 ## Objective
 <p>
-To make an application that will determine if you will be devoured by a shark based off historic data and machine learning in the form of an interactive and fun website. 
+To make an application that will determine if you will devoured by a shark based off historic data and machine learning in the form of an interactive and fun website. 
+</p>
+
+## How the ML model works:
+<p>
+We got our dataset from https://www.kaggle.com/felipeesc/shark-attack-dataset which is basically Shark attack data. Then we saw the attributes which would be needed to predict and  dropped the rest of the columns. Now since most of our attributes are categorical data so we used One-Hot encoding (For: Sex and Time columns) and Target encoding (For: Country and activities). Now all of our data is in numeric form so then we used SMOTE to balance our data as we had a lot of None-fatal cases compared to fatal-cases. Then we finally used logistic regression to train our model and saved it as a pickle file (Check out the .ipy file in Machine learning directory for complete code). 
 </p>
 
 ##  Languages Used:
