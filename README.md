@@ -29,7 +29,7 @@ We got our dataset from  [Kagle](https://www.kaggle.com/felipeesc/shark-attack-d
   
 | Person  | Linkedin |
 | ------------- | ------------- |
-| Niveditha Sivam  | [Linkedin](https://www.linkedin.com/in/niveditha-sivan-909915210/)  |
+| Niveditha Sivan  | [Linkedin](https://www.linkedin.com/in/niveditha-sivan-909915210/)  |
 | Nihal Srivastava  | [Linkedin](https://www.linkedin.com/in/nihal-srivastava-7708a71b7/)  |
 | Pranav Viswanathan  | [Linkedin](https://www.linkedin.com/in/pranav-viswanathan-7976711b7/)  |
 | Varun Kamath  | [Linkedin](https://www.linkedin.com/in/varun-kamath-b29873198/)  |
