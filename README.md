@@ -23,7 +23,7 @@ We got our dataset from https://www.kaggle.com/felipeesc/shark-attack-dataset wh
 
 ## People Part of the Project:
 
-<center style="text-align:center">
+<div align="center">
   
   
 | Person  | Linkedin |
@@ -34,6 +34,6 @@ We got our dataset from https://www.kaggle.com/felipeesc/shark-attack-dataset wh
 | Varun Kamath  | [Linkedin](https://www.linkedin.com/in/varun-kamath-b29873198/)  |
   
   
-</center>
+</div>
 
 <br>
